@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html><body>
-<h2>Login</h2>
-<form method="POST">
-  {{ form.hidden_tag() }}
-  {{ form.username.label }} {{ form.username() }}<br>
-  {{ form.password.label }} {{ form.password() }}<br>
-  <input type="submit" value="Login">
-</form>
-</body></html>
+<html>
+<body>
+  <h2>Login</h2>
+
+  <!-- 🔔 Flash Messages Block -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flashes" style="color: red;">
+        {% for msg in messages %}
+          <li>{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <!-- 🧾 Login Form -->
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username() }}<br>
+    {{ form.password.label }} {{ form.password() }}<br>
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>

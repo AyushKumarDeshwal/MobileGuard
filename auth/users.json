@@ -1,6 +1,10 @@
 {
   "testuser": {
-    "password": "$2b$12$ABCDEFGHIJKLMNOPQRSTUVWXabcdefghijklmnoPQRSTU",
+    "password": "<existing_hash>",
     "token": "testtoken123456"
+  },
+  "admin": {
+    "password": "$2b$12$...your_generated_hash...",
+    "token": "admintoken123"
   }
 }
