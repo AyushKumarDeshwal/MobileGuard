@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><body>
+<h2>Dashboard</h2>
+<form method="GET">
+  <input type="text" name="keyword" placeholder="Search logs" />
+  <select name="level">
+    <option value="">All</option>
+    <option value="info">INFO</option>
+    <option value="warn">WARN</option>
+    <option value="error">ERROR</option>
+  </select>
+  <button type="submit">Filter</button>
+</form>
+
+<h3>Alerts:</h3>
+<ul>
+{% for alert in alerts %}
+  <li>{{ alert }}</li>
+{% endfor %}
+</ul>
+
+<h3>Logs:</h3>
+<ul>
+{% for log in logs %}
+  {% if (not keyword or keyword in log|string) and (not level or level in log|string) %}
+    <li>{{ log }}</li>
+  {% endif %}
+{% endfor %}
+</ul>
+</body></html>

@@ -1,0 +1,6 @@
+{
+  "testuser": {
+    "password": "$2b$12$ABCDEFGHIJKLMNOPQRSTUVWXabcdefghijklmnoPQRSTU",
+    "token": "testtoken123456"
+  }
+}

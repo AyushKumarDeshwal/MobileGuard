@@ -1,0 +1,6 @@
+flask
+flask-wtf
+flask-limiter
+bcrypt
+fpdf
+requests

@@ -1,0 +1,5 @@
+[
+  {"timestamp": "2025-07-01 10:00", "level": "info", "message": "User login"},
+  {"timestamp": "2025-07-01 10:05", "level": "warn", "message": "Unauthorized admin page attempt"},
+  {"timestamp": "2025-07-01 10:10", "level": "error", "message": "SQLi detected: ' OR 1=1"}
+]
